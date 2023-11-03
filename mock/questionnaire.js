@@ -18,6 +18,17 @@ module.exports = [
           componentList: [
             {
               fe_id: Random.id(),
+              type: "info",
+              title: "问卷信息",
+              props: {
+                title: "问卷标题",
+                desc: "问卷描述...",
+              },
+              isHidden: false,
+              isLocked: false,
+            },
+            {
+              fe_id: Random.id(),
               type: "title",
               title: "标题",
               props: {
@@ -26,12 +37,23 @@ module.exports = [
                 isCenter: false,
               },
               isHidden: false,
-              isLocked: true,
+              isLocked: false,
+            },
+            {
+              fe_id: Random.id(),
+              type: "paragraph",
+              title: "段落",
+              props: {
+                text: "一段段落",
+                isCenter: false,
+              },
+              isHidden: false,
+              isLocked: false,
             },
             {
               fe_id: Random.id(),
               type: "input",
-              title: "输入框1",
+              title: "输入框",
               props: {
                 title: "你的姓名",
                 placeholder: "请输入你的姓名...",
@@ -41,11 +63,45 @@ module.exports = [
             },
             {
               fe_id: Random.id(),
-              type: "input",
-              title: "输入框2",
+              type: "textarea",
+              title: "多行输入框",
               props: {
-                title: "你的电话",
-                placeholder: "请输入你的电话...",
+                title: "你的爱好",
+                placeholder: "请输入你的爱好...",
+              },
+              isHidden: false,
+              isLocked: false,
+            },
+            {
+              fe_id: Random.id(),
+              type: "radio",
+              title: "单选框",
+              props: {
+                title: "单选标题",
+                options: [
+                  { text: "选项1", value: "item1" },
+                  { text: "选项2", value: "item2" },
+                  { text: "选项3", value: "item3" },
+                ],
+                // 默认选中
+                value: "",
+                isVertical: false,
+              },
+              isHidden: false,
+              isLocked: false,
+            },
+            {
+              fe_id: Random.id(),
+              type: "checkbox",
+              title: "多选框",
+              props: {
+                title: "多选标题",
+                list: [
+                  { text: "选项1", value: "item1", checked: false },
+                  { text: "选项2", value: "item2", checked: false },
+                  { text: "选项3", value: "item3", checked: false },
+                ],
+                isVertical: false,
               },
               isHidden: false,
               isLocked: false,
