@@ -14,6 +14,10 @@ module.exports = [
           username: Random.title(),
           nickname: Random.ctitle(),
         },
+
+        // 测试未登录
+        // errno: 100,
+        // msg: '获取用户信息失败'
       };
     },
   },

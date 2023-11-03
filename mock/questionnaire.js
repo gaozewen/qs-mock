@@ -14,6 +14,43 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
+          // 组件列表
+          componentList: [
+            {
+              fe_id: Random.id(),
+              type: "title",
+              title: "标题",
+              props: {
+                text: "个人信息调研",
+                level: 1,
+                isCenter: false,
+              },
+              isHidden: false,
+              isLocked: true,
+            },
+            {
+              fe_id: Random.id(),
+              type: "input",
+              title: "输入框1",
+              props: {
+                title: "你的姓名",
+                placeholder: "请输入你的姓名...",
+              },
+              isHidden: false,
+              isLocked: false,
+            },
+            {
+              fe_id: Random.id(),
+              type: "input",
+              title: "输入框2",
+              props: {
+                title: "你的电话",
+                placeholder: "请输入你的电话...",
+              },
+              isHidden: false,
+              isLocked: false,
+            },
+          ],
         },
       };
     },
@@ -76,12 +113,12 @@ module.exports = [
   },
   {
     // 批量彻底删除问卷
-    url: '/api/questionnaire',
-    method: 'delete',
+    url: "/api/questionnaire",
+    method: "delete",
     response() {
       return {
-        errno: 0
-      }
-    }
-  }
+        errno: 0,
+      };
+    },
+  },
 ];
