@@ -17,6 +17,7 @@ module.exports = [
           desc: Random.cparagraph(),
           js: "",
           css: "",
+          isPublished: true,
           // 组件列表
           componentList: [
             {
