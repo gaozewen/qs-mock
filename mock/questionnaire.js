@@ -19,6 +19,7 @@ module.exports = [
           js: "",
           css: "",
           isPublished: true,
+          isDeleted: false,
           // 组件列表
           // 问卷编辑页用
           // componentList: getComponentList(),
